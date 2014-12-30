@@ -18,12 +18,12 @@ Person::~Person(void)
 {
 }
 
-int Person::GetAge()
+int Person::GetAge() const
 {
 	return _age;
 }
 
-const string & Person::GetName()
+const string & Person::GetName() const 
 {
 	return _name;
 }
@@ -37,7 +37,7 @@ void Person::SetAge(int age)
 	_age = age;
 }
 
-void Person::SetName(string name)
+void Person::SetName(const string & name)
 {
 	_name = name;
 }
@@ -58,7 +58,7 @@ void Person::InputFromConsole()
 	} while(_age <= 0);
 }
 
-void Person::PrintToConsole()
+void Person::PrintToConsole() const 
 {
 	cout << "Name: " << _name << "\tAge:" << to_string(_age) << endl;
 }
