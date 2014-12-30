@@ -9,13 +9,14 @@ private:
 	int _age;
 	string _name;
 public:
+// Person (const string & name, int age):_age(age)._name(name){}
 	Person(void);
 	~Person(void);
-	int GetAge();
-	const string & GetName();
+	int GetAge() const;
+	const string & GetName() const ;
 	void SetAge(int age);
-	void SetName(string name);
+	void SetName(const string & name);
 	void InputFromConsole();
-	void PrintToConsole();
+	void PrintToConsole() const ;
 };
 
